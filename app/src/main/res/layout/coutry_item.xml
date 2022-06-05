@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/country_name_edit_text">
+
+    <ImageView
+        android:id="@+id/country_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/country_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/country_image_view"
+        app:layout_constraintTop_toTopOf="@+id/country_image_view"
+        tools:text="Россия" />
+
+    <TextView
+        android:id="@+id/country_capital_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/capital_label"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/country_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/country_name_view" />
+
+    <TextView
+        android:id="@+id/country_capital_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/country_capital_label_view"
+        app:layout_constraintTop_toTopOf="@+id/country_capital_label_view"
+        tools:text="Москва" />
+
+    <TextView
+        android:id="@+id/population_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/population_label"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country_image_view" />
+
+    <TextView
+        android:id="@+id/population_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/population_label_view"
+        app:layout_constraintTop_toTopOf="@+id/population_label_view"
+        tools:text="147 000 000" />
+
+    <TextView
+        android:id="@+id/area_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/area_label"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/population_label_view"
+        app:layout_constraintTop_toBottomOf="@+id/population_label_view" />
+
+    <TextView
+        android:id="@+id/area_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/area_label_view"
+        app:layout_constraintTop_toBottomOf="@+id/population_view"
+        tools:text="50 000 000" />
+
+    <TextView
+        android:id="@+id/languages_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/languages_label"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/area_label_view"
+        app:layout_constraintTop_toBottomOf="@+id/area_label_view" />
+
+    <TextView
+        android:id="@+id/languages_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/languages_label_view"
+        app:layout_constraintTop_toBottomOf="@+id/area_text_view"
+        tools:text="Русский" />
+</androidx.constraintlayout.widget.ConstraintLayout>
