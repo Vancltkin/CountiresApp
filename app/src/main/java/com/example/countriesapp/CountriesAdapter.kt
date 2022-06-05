@@ -12,7 +12,13 @@ class CountriesAdapter(private val lifecycleScope: LifecycleCoroutineScope) :
     var items: List<Country> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
-        return CountryViewHolder(CoutryItemBinding.inflate(LayoutInflater.from(parent.context)))
+        return CountryViewHolder(
+            CoutryItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
